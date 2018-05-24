@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rattle.wav-d8111647bedd98bead0dc663d897556e.sample"
+
+[deps]
+
+source_file="res://Resources/rattle.wav"
+source_md5="2d75df25e520aeb9c87b306b4780d9eb"
+
+dest_files=[ "res://.import/rattle.wav-d8111647bedd98bead0dc663d897556e.sample" ]
+dest_md5="07a830c769add3d24a989acd991205a3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

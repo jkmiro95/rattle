@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grzechotka4.obj-69a7d70a23982e771eff3ecef18e191c.mesh"
+
+[deps]
+
+files=[ "res://.import/grzechotka4.obj-69a7d70a23982e771eff3ecef18e191c.mesh" ]
+
+source_file="res://Resources/grzechotka4.obj"
+source_md5="e64ec607b99f4c8794f0cb44ea72bbb2"
+
+dest_files=[ "res://.import/grzechotka4.obj-69a7d70a23982e771eff3ecef18e191c.mesh", "res://.import/grzechotka4.obj-69a7d70a23982e771eff3ecef18e191c.mesh" ]
+dest_md5="256792b366d640eb5b23b244f2c3a2c9"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

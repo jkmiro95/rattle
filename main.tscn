@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/grzechotka4.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://MeshInstance.gd" type="Script" id=2]
+[ext_resource path="res://camera.gd" type="Script" id=3]
+[ext_resource path="res://Points.gd" type="Script" id=4]
+[ext_resource path="res://Mass.gd" type="Script" id=5]
+[ext_resource path="res://Resources/rattle.wav" type="AudioStream" id=6]
+
+[sub_resource type="SphereMesh" id=1]
+
+radius = 1.0
+height = 2.0
+radial_segments = 64
+rings = 32
+is_hemisphere = false
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Rattle" type="Node" parent="." index="0"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Rattle" index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera" type="Camera" parent="." index="1"]
+
+transform = Transform( 0.559193, 0, -0.829038, 0, 1, 0, 0.829038, 0, 0.559193, -20, 10, 10 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Points" type="Node" parent="." index="2"]
+
+script = ExtResource( 4 )
+
+[node name="Mass" type="Node" parent="." index="3"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Mass" index="0"]
+
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+script = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RattleSound" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+
